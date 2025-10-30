@@ -69,12 +69,15 @@ function ScrollToTopButton() {
         zIndex: 1000,
         borderRadius: '50%',
         width: '50px',
-        height: '50px'
+        height: '50px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
       onClick={scrollToTop}
       title="Scroll to top"
     >
-      <FaArrowUp />
+      <FaArrowUp style={{ marginLeft: '-6px' }} />
     </button>
   );
 }
