@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FaUserMd, FaUsers, FaDollarSign, FaLanguage, FaHandsHelping, FaGraduationCap } from 'react-icons/fa';
-import { MdLocationOn, MdSchedule } from 'react-icons/md';
+import { FaUserMd, FaUsers, FaDollarSign, FaLanguage, FaHandsHelping } from 'react-icons/fa';
+import { MdLocationOn } from 'react-icons/md';
 
 const Volunteer = () => {
   const [volunteerForm, setVolunteerForm] = useState({

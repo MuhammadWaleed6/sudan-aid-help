@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEdit, FaUser, FaEnvelope, FaMapMarkerAlt, FaList, FaImage, FaPaperPlane, FaHeart, FaComment, FaShare, FaEye, FaCheckCircle, FaTimes } from 'react-icons/fa';
+import { FaEdit, FaUser, FaList, FaPaperPlane, FaHeart, FaComment, FaShare, FaEye, FaCheckCircle, FaTimes } from 'react-icons/fa';
 
 const SubmitStory = () => {
   const [storyForm, setStoryForm] = useState({

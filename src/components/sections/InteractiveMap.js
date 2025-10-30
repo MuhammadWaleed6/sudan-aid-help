@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { mapData } from '../../data/mockData';
-import { FaMapMarkerAlt, FaHeart, FaChartBar } from 'react-icons/fa';
+import { FaHeart, FaChartBar } from 'react-icons/fa';
 import { MdLocationOn, MdMap } from 'react-icons/md';
 
 const InteractiveMap = () => {

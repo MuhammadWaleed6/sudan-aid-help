@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaPhone, FaGlobe, FaLock, FaShieldAlt } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaPhone, FaGlobe, FaLock } from 'react-icons/fa';
 
 const Footer = ({ darkMode }) => {
   const currentYear = new Date().getFullYear();
@@ -174,7 +174,7 @@ const Footer = ({ darkMode }) => {
                 <div className="text-white" style={{ fontSize: '15px' }}>
                   <FaLock className="me-2" /><strong>Transparency Commitment:</strong> 100% of donations go directly to humanitarian aid. 
                   Administrative costs are covered by separate funding sources.
-                  <a href="#" className="text-white ms-2 text-decoration-underline">View Financial Reports →</a>
+                  <button className="btn btn-link text-white ms-2 text-decoration-underline p-0">View Financial Reports →</button>
                 </div>
               </div>
             </div>
