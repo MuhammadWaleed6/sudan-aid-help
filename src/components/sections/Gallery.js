@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Gallery = () => {
   const [selectedMedia, setSelectedMedia] = useState(null);
@@ -159,9 +160,9 @@ const Gallery = () => {
                 <p className="mb-4">
                   Have photos or stories from Sudan? Help us raise awareness by sharing your experiences.
                 </p>
-                <a href="/stories" className="btn btn-light btn-lg">
+                <Link to="/stories" className="btn btn-light btn-lg">
                   📤 Submit Your Story
-                </a>
+                </Link>
               </div>
             </div>
           </div>

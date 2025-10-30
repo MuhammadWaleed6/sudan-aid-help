@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { newsUpdates } from '../../data/mockData';
 import { FaExternalLinkAlt, FaShare, FaBookmark } from 'react-icons/fa';
 import { MdWarning } from 'react-icons/md';
@@ -106,7 +107,7 @@ const LiveUpdates = () => {
                   <h6 className="alert-heading fw-bold mb-1">Emergency Alert</h6>
                   <p className="mb-0">
                     Urgent need for medical supplies in North Darfur. 
-                    <a href="/donate" className="alert-link ms-1">Donate now to help</a>
+                    <Link to="/donate" className="alert-link ms-1">Donate now to help</Link>
                   </p>
                 </div>
               </div>

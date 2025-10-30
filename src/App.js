@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,6 +24,60 @@ import CookiePolicy from './components/pages/CookiePolicy';
 
 import './App.css';
 
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
+
+// Scroll to top button
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
+  return (
+    <button
+      className={`btn btn-primary position-fixed ${isVisible ? 'd-block' : 'd-none'}`}
+      style={{
+        bottom: '20px',
+        right: '20px',
+        zIndex: 1000,
+        borderRadius: '50%',
+        width: '50px',
+        height: '50px'
+      }}
+      onClick={scrollToTop}
+      title="Scroll to top"
+    >
+      ↑
+    </button>
+  );
+}
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -44,6 +98,7 @@ function App() {
   return (
     <Router>
       <div className={`App ${darkMode ? 'dark-theme' : ''}`}>
+        <ScrollToTop />
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         
         <Routes>
@@ -70,6 +125,7 @@ function App() {
         </Routes>
         
         <Footer darkMode={darkMode} />
+        <ScrollToTopButton />
       </div>
     </Router>
   );
