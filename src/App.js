@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { FaArrowUp } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -73,7 +74,7 @@ function ScrollToTopButton() {
       onClick={scrollToTop}
       title="Scroll to top"
     >
-      ↑
+      <FaArrowUp />
     </button>
   );
 }
