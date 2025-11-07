@@ -396,7 +396,7 @@ p, .card-text { font-size: 16px; line-height: 1.6; }
 
 /* Page content spacing to avoid navbar overlap */
 .page-content {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 /* Better spacing for mobile */

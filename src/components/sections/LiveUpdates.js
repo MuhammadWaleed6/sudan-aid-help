@@ -44,7 +44,7 @@ const LiveUpdates = () => {
   }
 
   return (
-    <section id="updates" className="py-5 page-content">
+    <section id="updates" className="py-5">
       <div className="container">
         <div className="row mb-5">
           <div className="col-lg-8 mx-auto text-center" data-aos="fade-up">
