@@ -257,6 +257,35 @@ html {
   color: #fff;
 }
 
+/* Mobile Overflow Prevention */
+body {
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  overflow-x: hidden;
+}
+
+/* AOS Animation Mobile Fixes */
+@media (max-width: 768px) {
+  [data-aos] {
+    transform: translateY(0) !important;
+  }
+  
+  [data-aos="fade-up"] {
+    transform: translateY(10px) !important;
+  }
+  
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateY(10px) !important;
+  }
+  
+  [data-aos="zoom-in"] {
+    transform: scale(0.98) !important;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .display-3 {
@@ -275,6 +304,17 @@ html {
   .btn-lg {
     padding: 0.75rem 2rem;
     font-size: 1rem;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .col, [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

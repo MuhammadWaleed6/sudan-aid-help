@@ -87,10 +87,12 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 400,
       easing: 'ease-in-out',
       once: true,
-      offset: 100
+      offset: 20,
+      disable: false,
+      disableMutationObserver: true
     });
   }, []);
 
