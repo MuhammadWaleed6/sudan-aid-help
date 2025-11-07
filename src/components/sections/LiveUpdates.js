@@ -47,7 +47,7 @@ const LiveUpdates = () => {
     <section id="updates" className="py-5">
       <div className="container">
         <div className="row mb-5">
-          <div className="col-lg-8 mx-auto text-center" data-aos="fade-up">
+          <div className="col-lg-8 mx-auto text-center">
             <h2 className="display-4 fw-bold mb-4">Live Updates & News</h2>
             <p className="lead text-muted">
               Stay informed with the latest developments and humanitarian reports from Sudan
@@ -58,7 +58,7 @@ const LiveUpdates = () => {
         <div className="row">
           <div className="col-lg-8 mx-auto">
             {updates.map((update, index) => (
-              <div key={update.id} className={`card mb-4 shadow-sm ${update.urgent ? 'border-danger border-2' : 'border-0'}`} data-aos="fade-up" data-aos-delay={index * 100}>
+              <div key={update.id} className={`card mb-4 shadow-sm ${update.urgent ? 'border-danger border-2' : 'border-0'}`}>
                 <div className="card-body p-4">
                   <div className="d-flex justify-content-between align-items-start mb-3">
                     <div className="d-flex gap-2">

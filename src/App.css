@@ -318,6 +318,11 @@ body {
   }
 }
 
+/* AOS Animation Padding Fix */
+.mt-5.pt-5.aos-init.aos-animate {
+  padding-bottom: 72px;
+}
+
 @media (max-width: 576px) {
   .container {
     padding-left: 15px;
