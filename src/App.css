@@ -254,7 +254,19 @@ html {
 }
 
 .dark-theme .navbar-light .navbar-nav .nav-link {
-  color: #fff;
+  color: #fff !important;
+}
+
+.dark-theme .navbar-light .navbar-brand {
+  color: #fff !important;
+}
+
+.dark-theme .navbar-collapse {
+  background: rgba(33, 37, 41, 0.98) !important;
+}
+
+.dark-theme .navbar-toggler-icon {
+  filter: invert(1);
 }
 
 /* Mobile Overflow Prevention */
